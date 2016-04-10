@@ -1,0 +1,10 @@
+zookeeper:
+  build: ./zookeeper
+
+
+kafka:
+  build: ./kafka
+  ports:
+   - "9092:9092"
+  links:
+   - zookeeper:zk
